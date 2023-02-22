@@ -4,10 +4,10 @@ using WeirdMultipleInheritanceStuff.Algorithms.ShortestPath;
 
 namespace WeirdMultipleInheritanceStuff.Combiners;
 
-public class EdgeCountDijkstra : 
-    DijkstrasShortestPathAlgorithm, 
-    EdgeTraversalCountDistanceMeasurer,
-    InMemoryNodeRepository<Node>
+public class EuclideanDistanceDijkstra :
+    DijkstrasShortestPathAlgorithm,
+    InMemoryCoordinateNodeRepository,
+    EuclideanCoordinateDistanceMeasurer
 {
-    public List<Node> Nodes { get; } = new();
+    public List<CoordinateNode> Nodes { get; } = new();
 }

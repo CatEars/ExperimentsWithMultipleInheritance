@@ -1,9 +1,7 @@
 ﻿namespace WeirdMultipleInheritanceStuff.Algorithms.Distance;
 
-public interface ICoordinateDistanceMeasurer : IDistanceMeasurer
+public interface ICoordinateDistanceMeasurer : IDistanceMeasurer, INodeCoordinateLookup
 {
-    Coordinate LookupNodeCoordinates(int nodeId);
-
     int DistanceOfCoordinates(Coordinate from, Coordinate to);
     
     int IDistanceMeasurer.Distance(Node from, Node to)

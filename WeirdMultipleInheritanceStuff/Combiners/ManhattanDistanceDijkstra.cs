@@ -10,5 +10,4 @@ public class ManhattanDistanceDijkstra :
     InMemoryCoordinateNodeRepository
 {
     public List<CoordinateNode> Nodes { get; } = new();
-    
 }

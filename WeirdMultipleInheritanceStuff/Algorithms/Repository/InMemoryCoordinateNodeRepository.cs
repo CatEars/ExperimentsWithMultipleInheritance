@@ -4,9 +4,9 @@ namespace WeirdMultipleInheritanceStuff.Algorithms.Repository;
 
 public interface InMemoryCoordinateNodeRepository : 
     InMemoryNodeRepository<CoordinateNode>, 
-    ICoordinateDistanceMeasurer
+    INodeCoordinateLookup
 {
-    Coordinate ICoordinateDistanceMeasurer.LookupNodeCoordinates(int nodeId)
+    Coordinate INodeCoordinateLookup.LookupNodeCoordinates(int nodeId)
     {
         return Repo.GetNode(nodeId).Coordinate;
     }
