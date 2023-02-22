@@ -15,8 +15,8 @@ public class EdgeCountDijkstra :
     public List<Node> Nodes { get; } = new();
 }
 
-public class EuclideanDistanceDijkstra :
-    DijkstrasShortestPathAlgorithm,
+public class EuclideanDistanceBellmanFord :
+    BellmanFordShortestPathAlgorithm,
     InMemoryCoordinateNodeRepository,
     EuclideanCoordinateDistanceMeasurer
 {
@@ -32,6 +32,6 @@ public class ManhattanDistanceDijkstra :
 }
 ```
 
-They all implement [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm), albeit with different definitions of "distance between nodes".
+They all implement [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) or the [Bellman-Ford algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm), albeit with different definitions of "distance between nodes".
 
 Yes, I am just as confused as you probably are.
