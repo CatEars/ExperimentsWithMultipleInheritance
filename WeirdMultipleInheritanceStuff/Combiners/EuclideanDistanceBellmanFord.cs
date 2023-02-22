@@ -5,9 +5,7 @@ using WeirdMultipleInheritanceStuff.Algorithms.ShortestPath;
 namespace WeirdMultipleInheritanceStuff.Combiners;
 
 public class EuclideanDistanceBellmanFord :
+    AbstractNodeHolder<CoordinateNode>,
     BellmanFordShortestPathAlgorithm,
     InMemoryCoordinateNodeRepository,
-    EuclideanCoordinateDistanceMeasurer
-{
-    public List<CoordinateNode> Nodes { get; } = new();
-}
+    EuclideanCoordinateDistanceMeasurer {}

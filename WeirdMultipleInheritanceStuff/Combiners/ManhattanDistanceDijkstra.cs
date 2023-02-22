@@ -4,10 +4,8 @@ using WeirdMultipleInheritanceStuff.Algorithms.ShortestPath;
 
 namespace WeirdMultipleInheritanceStuff.Combiners;
 
-public class ManhattanDistanceDijkstra : 
-    DijkstrasShortestPathAlgorithm, 
+public class ManhattanDistanceDijkstra :
+    AbstractNodeHolder<CoordinateNode>,
+    DijkstrasShortestPathAlgorithm,
     ManhattanCoordinateDistanceMeasurer,
-    InMemoryCoordinateNodeRepository
-{
-    public List<CoordinateNode> Nodes { get; } = new();
-}
+    InMemoryCoordinateNodeRepository {}
