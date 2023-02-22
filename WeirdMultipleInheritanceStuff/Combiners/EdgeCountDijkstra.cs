@@ -6,7 +6,7 @@ namespace WeirdMultipleInheritanceStuff.Combiners;
 
 public class EdgeCountDijkstra : 
     DijkstrasShortestPathAlgorithm, 
-    EdgeTraversalCountDistanceMeasuring,
+    EdgeTraversalCountDistanceMeasurer,
     InMemoryNodeRepository<Node>
 {
     public List<Node> Nodes { get; } = new();

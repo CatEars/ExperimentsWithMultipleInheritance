@@ -2,7 +2,7 @@
 
 namespace WeirdMultipleInheritanceStuff.Algorithms.ShortestPath;
 
-public interface DijkstrasShortestPathAlgorithm : IShortestPathCalculator, DistanceMeasurer
+public interface DijkstrasShortestPathAlgorithm : IShortestPathCalculator, IDistanceMeasurer
 {
     GraphPath IShortestPathCalculator.CalculateShortestPath(Graph graph, Node start, Node destination)
     {
@@ -42,7 +42,7 @@ public interface DijkstrasShortestPathAlgorithm : IShortestPathCalculator, Dista
             foreach (var neigh in unvisitedNeighbors)
             {
                 var targetNode = nodeLookup[neigh];
-                var fullDistance = distance + Measuring.Distance(current, targetNode);
+                var fullDistance = distance + Measurer.Distance(current, targetNode);
                 queue.Enqueue((current, targetNode), fullDistance);
             }
         }

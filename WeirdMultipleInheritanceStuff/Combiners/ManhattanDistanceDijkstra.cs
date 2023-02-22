@@ -6,7 +6,7 @@ namespace WeirdMultipleInheritanceStuff.Combiners;
 
 public class ManhattanDistanceDijkstra : 
     DijkstrasShortestPathAlgorithm, 
-    ManhattanCoordinateDistanceMeasuring,
+    ManhattanCoordinateDistanceMeasurer,
     InMemoryCoordinateNodeRepository
 {
     public List<CoordinateNode> Nodes { get; } = new();

@@ -1,8 +1,8 @@
 ﻿namespace WeirdMultipleInheritanceStuff.Algorithms.Distance;
 
-public interface ManhattanCoordinateDistanceMeasuring : ICoordinateDistanceMeasuring
+public interface ManhattanCoordinateDistanceMeasurer : ICoordinateDistanceMeasurer
 {
-    int ICoordinateDistanceMeasuring.DistanceOfCoordinates(Coordinate from, Coordinate to)
+    int ICoordinateDistanceMeasurer.DistanceOfCoordinates(Coordinate from, Coordinate to)
     {
         var diffX = from.X - to.X;
         var diffY = from.Y - to.Y;
