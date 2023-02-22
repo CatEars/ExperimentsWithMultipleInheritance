@@ -8,7 +8,6 @@ public interface InMemoryCoordinateNodeRepository :
 {
     Coordinate ICoordinateDistanceMeasurer.LookupNodeCoordinates(int nodeId)
     {
-        INodeRepository<CoordinateNode> SelfAsRepo() => this;
-        return SelfAsRepo().GetNode(nodeId).Coordinate;
+        return Repo.GetNode(nodeId).Coordinate;
     }
 }

@@ -2,7 +2,6 @@
 
 public interface INodeRepository<TNodeType> where TNodeType : Node
 {
-
     void AddNode(TNodeType node);
 
     TNodeType GetNode(int nodeId);
@@ -11,5 +10,4 @@ public interface INodeRepository<TNodeType> where TNodeType : Node
     {
         foreach (var node in nodes) AddNode(node);
     }
-    
 }

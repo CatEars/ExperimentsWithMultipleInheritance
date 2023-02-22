@@ -4,6 +4,8 @@ public interface InMemoryNodeRepository<TNodeType> : INodeRepository<TNodeType> 
 {
     List<TNodeType> Nodes { get; }
 
+    InMemoryNodeRepository<TNodeType> Repo => this;
+
     void INodeRepository<TNodeType>.AddNode(TNodeType node)
     {
         Nodes.Add(node);
