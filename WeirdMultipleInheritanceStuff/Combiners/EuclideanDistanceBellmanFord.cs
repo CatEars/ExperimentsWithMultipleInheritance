@@ -7,5 +7,5 @@ namespace WeirdMultipleInheritanceStuff.Combiners;
 public class EuclideanDistanceBellmanFord :
     AbstractNodeHolder<CoordinateNode>,
     BellmanFordShortestPathAlgorithm,
-    InMemoryCoordinateNodeRepository,
-    EuclideanCoordinateDistanceMeasurer {}
+    EuclideanCoordinateDistanceMeasurer,
+    InMemoryCoordinateNodeRepository {}

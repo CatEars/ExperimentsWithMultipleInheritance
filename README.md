@@ -21,8 +21,8 @@ public class EdgeCountDijkstra :
 public class EuclideanDistanceBellmanFord :
     AbstractNodeHolder<CoordinateNode>,
     BellmanFordShortestPathAlgorithm,
-    InMemoryCoordinateNodeRepository,
-    EuclideanCoordinateDistanceMeasurer {}
+    EuclideanCoordinateDistanceMeasurer,
+    InMemoryCoordinateNodeRepository {}
 
 public class ManhattanDistanceDijkstra :
     AbstractNodeHolder<CoordinateNode>,
