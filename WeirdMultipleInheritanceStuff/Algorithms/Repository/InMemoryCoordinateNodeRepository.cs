@@ -2,8 +2,8 @@
 
 namespace WeirdMultipleInheritanceStuff.Algorithms.Repository;
 
-public interface InMemoryCoordinateNodeRepository : 
-    InMemoryNodeRepository<CoordinateNode>, 
+public interface InMemoryCoordinateNodeRepository :
+    InMemoryNodeRepository<CoordinateNode>,
     INodeCoordinateLookup
 {
     Coordinate INodeCoordinateLookup.LookupNodeCoordinates(int nodeId)

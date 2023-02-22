@@ -10,7 +10,7 @@ public interface ParentPathFind
             elementId = parent[elementId];
             path.Add(elementId);
         } while (parent[elementId] != -1);
-            
+
         return path;
     }
 }

@@ -3,7 +3,7 @@
 public interface ICoordinateDistanceMeasurer : IDistanceMeasurer, INodeCoordinateLookup
 {
     int DistanceOfCoordinates(Coordinate from, Coordinate to);
-    
+
     int IDistanceMeasurer.Distance(Node from, Node to)
     {
         var coordinateFrom = LookupNodeCoordinates(from.Id);
