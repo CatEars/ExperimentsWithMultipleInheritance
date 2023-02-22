@@ -2,7 +2,7 @@
 
 namespace WeirdMultipleInheritanceStuff.Algorithms.ShortestPath;
 
-public interface DijkstrasShortestPathAlgorithm : IShortestPathCalculator, IDistanceMeasurer
+public interface DijkstrasShortestPathAlgorithm : IShortestPathCalculator, IDistanceMeasurer, ParentPathFind
 {
     private static List<int> FindPath(IReadOnlyDictionary<int, int> parent, int elementId)
     {
@@ -33,7 +33,8 @@ public interface DijkstrasShortestPathAlgorithm : IShortestPathCalculator, IDist
             
             if (current.Id == destination.Id)
             {
-                var path = FindPath(parent, current.Id);
+                var path = FindPathToRootParent(parent, current.Id);
+                path.Reverse();
                 return new GraphPath(path, distance);
             }
 

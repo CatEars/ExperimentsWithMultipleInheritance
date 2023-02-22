@@ -7,7 +7,7 @@ using Xunit;
 
 namespace WeirdMultipleInheritanceStuff.Tests;
 
-public class EuclideanDistanceDijkstraTest
+public class EuclideanDistanceBellmanFordTest
 {
     [Fact]
     public void StraightGraph()
@@ -61,11 +61,11 @@ public class EuclideanDistanceDijkstraTest
     }
     
     
-    private static Graph CreateSut(List<CoordinateNode> nodes, Dictionary<int, List<int>> edges, out EuclideanDistanceDijkstra solver)
+    private static Graph CreateSut(List<CoordinateNode> nodes, Dictionary<int, List<int>> edges, out EuclideanDistanceBellmanFord solver)
     {
         var nodeList = nodes.Select(x => (Node) x).ToList();
         var graph = new Graph(nodeList, edges);
-        solver = new EuclideanDistanceDijkstra();
+        solver = new EuclideanDistanceBellmanFord();
         INodeRepository<CoordinateNode> repo = solver;
         repo.AddNodes(nodes);
         return graph;

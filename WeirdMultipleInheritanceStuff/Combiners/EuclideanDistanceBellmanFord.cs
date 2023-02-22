@@ -4,8 +4,8 @@ using WeirdMultipleInheritanceStuff.Algorithms.ShortestPath;
 
 namespace WeirdMultipleInheritanceStuff.Combiners;
 
-public class EuclideanDistanceDijkstra :
-    DijkstrasShortestPathAlgorithm,
+public class EuclideanDistanceBellmanFord :
+    BellmanFordShortestPathAlgorithm,
     InMemoryCoordinateNodeRepository,
     EuclideanCoordinateDistanceMeasurer
 {
